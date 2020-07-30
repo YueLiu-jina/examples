@@ -31,7 +31,7 @@ def print_topk(resp, word):
 
 def config(num_docs,mode='index'):
     os.environ['PARALLEL'] = os.environ.get('PARALLEL', str(2) if mode == 'index' else str(1))
-    os.environ['SHARDS'] = os.environ.get('SHARDS', str(2))
+    os.environ['SHARDS'] = os.environ.get('SHARDS', str(1))
     os.environ['MAX_NUM_DOCS'] = os.environ.get('MAX_NUM_DOCS', str(num_docs))
     os.environ['JINA_PORT'] = os.environ.get('JINA_PORT', str(45678))
 
